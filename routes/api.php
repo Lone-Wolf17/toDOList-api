@@ -18,9 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('todos', 'TodoApiController@getAllTodos');
-Route::get('todos/{id}', 'TodoApiController@getTodo');
-Route::post('todos', 'TodoApiController@createTodo');
-Route::put('todos/{id}', 'TodoApiController@updateTodo');
-Route::delete('todos/{id}', 'TodoApiController@deleteTodo');
+Route::get('todos', 'TodoController@getAllTodos');
+Route::get('todos/{id}', 'TodoController@getTodo');
+Route::post('todos', 'TodoController@createTodo');
+Route::put('todos/{id}', 'TodoController@updateTodo');
+Route::delete('todos/{id}', 'TodoController@deleteTodo');
 
