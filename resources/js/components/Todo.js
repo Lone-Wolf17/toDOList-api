@@ -16,7 +16,6 @@ export default function Todo ({ todo, index, onTodoDeleted }) {
 
     const completeTodo = () => {
 
-        // todo.is_completed = !todo.is_completed;
 
         axios.put(`api/todos/${todo.id}`)
             .then((res) => {
@@ -28,10 +27,16 @@ export default function Todo ({ todo, index, onTodoDeleted }) {
     }
 
     return (
-      <div>
-          <h1 className={todo.is_completed ? 'complete' : ''}>{todo.title}</h1>
-          <button onClick={deleteTodo}  >Delete</button>
-          <button onClick={completeTodo} >Complete</button>
+      <div className='card'>
+          <div className='card-header'>
+              <h1 className={todo.is_completed ? 'complete' : ''}>{todo.title}</h1>
+          </div>
+          <div className='card-body'>
+              <h4> {todo.description}</h4>
+              <button onClick={deleteTodo}  >Delete</button>
+              <button onClick={completeTodo} >Complete</button>
+          </div>
+
       </div>
     );
 }

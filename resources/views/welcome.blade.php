@@ -69,6 +69,17 @@
             .complete {
                 text-decoration: line-through;
             }
+
+            .myText {
+                margin-bottom: 15px;
+                width : 300px;
+                height: 25px;
+            }
+
+            .txtBox {
+                height: 60px;
+            }
+
         </style>
     </head>
     <body>

@@ -11,7 +11,7 @@ class TodoController extends Controller
         // logic to get all todos Items goes here
 //        dump("XXX A");
 
-        $todos = Todo::get()->toJson(JSON_PRETTY_PRINT);
+        $todos = Todo::latest()->get()->toJson(JSON_PRETTY_PRINT);
 
         return response($todos, 200);
     }
